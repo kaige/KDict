@@ -1,0 +1,25 @@
+{
+  "name": "bing-translate",
+  "version": "0.0.1",
+  "description": "Bing Translator module for node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexu84/bing-translate.git"
+  },
+  "keywords": [
+    "microsoft",
+    "bing",
+    "translator",
+    "translate"
+  ],
+  "author": "Alexandru Marian Vasile <codemaster64bit@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexu84/bing-translate/issues"
+  },
+  "homepage": "https://github.com/alexu84/bing-translate"
+}
