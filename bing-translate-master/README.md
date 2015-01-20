@@ -1,3 +1,8 @@
+this bing-translate module is from alexu84's repository:
+
+https://github.com/alexu84/bing-translate
+
+
 bing-translate
 ==============
 
