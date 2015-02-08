@@ -45,8 +45,6 @@ function addNewWord(word, date)
                 }
             );
         });
-
-        setTimeout(function() {newWordDB.close();}, 3000);
     });
 }
 
