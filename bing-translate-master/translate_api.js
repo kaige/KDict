@@ -4,7 +4,7 @@ var url = require('url');
 var MongoClient = require('mongodb').MongoClient;
 
 
-fd = fs.openSync('client_id_secret.json', 'r');
+fd = fs.openSync('../client_id_secret.json', 'r');
 var id_secret_str = "";
 do {
     var buf = new Buffer(1024);

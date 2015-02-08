@@ -48,7 +48,7 @@ client.translate = function(text, from, to, callback){
 }
 
 client.token = {};
-var cached_token_file = "cached_token.txt";
+var cached_token_file = "../cached_token.txt";
 
 client.isTokenExpired = function() {
   if (!fs.existsSync(cached_token_file))
