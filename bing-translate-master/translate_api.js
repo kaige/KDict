@@ -1,10 +1,11 @@
 var fs = require('fs');
-var http = require('http');
+var express = require('express');
 var url = require('url');
 var MongoClient = require('mongodb').MongoClient;
+var app = express();
+app.listen(80);
 
-
-fd = fs.openSync('../client_id_secret.json', 'r');
+var fd = fs.openSync('../client_id_secret.json', 'r');
 var id_secret_str = "";
 do {
     var buf = new Buffer(1024);
@@ -48,16 +49,9 @@ function addNewWord(word, date)
     });
 }
 
-http.createServer(function (req, res) {
-
-    var urlObj = url.parse(req.url, true, false);
-    var path =urlObj.path;
-    var subStrs = path.split('\/');
-
-    if (subStrs.length == 3 && subStrs[1] == "api")
-    {
-        var word = subStrs[2];
-        bt.translate(word, 'en', 'zh-CHS', function(translate_err, translate_res){
+app.get('/api/:word', function(req, res) {
+    var text = req.param('word');
+    bt.translate(text, 'en', 'zh-CHS', function(translate_err, translate_res){
             if (translate_err)
             {
                 res.writeHead(404);
@@ -68,16 +62,10 @@ http.createServer(function (req, res) {
             console.log(translate_res);
 
             var currentDate = new Date();
-            addNewWord(word, currentDate);
+            addNewWord(text, currentDate);
 
             var translate_result = translate_res["translated_text"];
             res.writeHead(200);
             res.end(translate_result);
         });
-    }
-    else {
-        res.writeHead(404);
-        res.end("API call error: please call by host:80/api/{word}");
-        return;
-    }
-}).listen(80);
+});
