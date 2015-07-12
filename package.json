@@ -1,0 +1,29 @@
+{
+  "name": "kdict",
+  "version": "1.0.0",
+  "description": "a web service to translate word using Bing translate API",
+  "main": "translate_api.js",
+  "dependencies": {
+    "mongodb": "^2.0.35",
+    "wechat": "^2.0.1",
+    "express": "^4.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node translate_api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kaige@github.com/kaige/KDict.git"
+  },
+  "keywords": [
+    "translate"
+  ],
+  "author": "Kai Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaige/KDict/issues"
+  },
+  "homepage": "https://github.com/kaige/KDict#readme"
+}

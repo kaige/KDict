@@ -3,11 +3,11 @@ var express = require('express');
 var url = require('url');
 var MongoClient = require('mongodb').MongoClient;
 var wechat = require('wechat');
-var kutil = require('./lib/k-util.js');
+var kutil = require('./bing-translate-master/lib/k-util.js');
 
-var client_id_secret = kutil.readJasonFromFile('../client_id_secret.json');
-var wechat_app_config = kutil.readJasonFromFile('../wechat_app_config.json');
-var bt = require('./lib/bing-translate.js').init(client_id_secret);
+var client_id_secret = kutil.readJasonFromFile('./client_id_secret.json');
+var wechat_app_config = kutil.readJasonFromFile('./wechat_app_config.json');
+var bt = require('./bing-translate-master/lib/bing-translate.js').init(client_id_secret);
     
 var app = express();
 app.listen(80);
