@@ -1,5 +1,5 @@
 # KDict
-a web service that could do translation by using Bing Translator API
+a translation web service using Bing Translator API
 
 Development Environment Setup:
 
