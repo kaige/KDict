@@ -20,7 +20,7 @@ $ node translate_api.js
   ```
   $ node --debug yourApp.js
   ```
-or, to pause applicaton on the first line:
+or, to pause on the first line:
   ```
   $ node --debug-brk yourApp.js
   ```
