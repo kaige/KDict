@@ -13,21 +13,21 @@ $ node translate_api.js
 ####Debug Node.js in Chrome Dev tools
 
 1. Install node inspector
-```
-$ npm install -g node-inspector
-```
+  ```
+  $ npm install -g node-inspector
+  ```
 2. Start application
-```
-$ node --debug yourApp.js
-```
+  ```
+  $ node --debug yourApp.js
+  ```
 or, to pause your script on the first line:
-```
-$ node --debug-brk yourApp.js
-```
+  ```
+  $ node --debug-brk yourApp.js
+  ```
 3. Start the inspector
-```
-$ node-inspector &
-```
+  ```
+  $ node-inspector &
+  ```
 
 Then we can debug our node code in Chrome dev tools.
 
