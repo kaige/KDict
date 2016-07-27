@@ -28,5 +28,6 @@ or, to pause your script on the first line:
   ```
   $ node-inspector &
   ```
+
 Then we can debug our node code in Chrome dev tools.
 
